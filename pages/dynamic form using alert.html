@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code</title>
+	<script type="text/javascript">
+		function create()
+		{
+
+		do{
+			var TypeContent=prompt("Enter the Type of Content\nFor text box type 1\nFor password box type 2\nFor dropdown type 3\nFor exit type 0");
+
+		if(TypeContent==1)
+		{
+			var Caption=prompt("Enter Caption =");
+			var Name=prompt("Enter the Name of textbox =");
+			var Id=prompt("Enter The Id of textbox = ");
+			var Value=prompt("Enter the value of TextBox =");
+			document.write(Caption+"<input type=\"text\""+"name=\""+Name+"\" id=\""+Id+"\" value=\""+Value+"\">"+"<br>");
+		}
+		if(TypeContent==2)
+		{
+			var Caption=prompt("Enter Caption =");
+			var Name=prompt("Enter the Name of Password box =");
+			var Id=prompt("Enter The Id of Password box = ");
+			var Value=prompt("Enter the value of Password Box =");
+			document.write(Caption+"<input type=\"password\""+"name=\""+Name+"\" id=\""+Id+"\" value=\""+Value+"\">"+"<br>");
+		}
+		if(TypeContent==3)
+		{
+			var Caption=prompt("Enter Caption =");
+			var Name=prompt("Enter the Name of DropDown =");
+			var Id=prompt("Enter The Id of DropDown = ");
+			var NoOfOption=prompt("Enter No. of Options");
+			document.write(Caption+"<select id=\""+Id+"\">");
+			for(i=1;i<=NoOfOption;i++)
+			{	
+				var TextOption=prompt("Enter Option "+i+" text =");
+				var Value=prompt("Enter option "+i+" Value =");
+				document.write("<option value=\""+TextOption+"\">"+Value+"</option>");
+			}
+			document.write("</select>");
+		}
+		}
+		while(TypeContent!=0);
+	}
+	
+	</script>
+</head>
+<body>
+	<input type="button" name="create" value="Create" onclick="create()">
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>code</title>
+	<script type="text/javascript">
+		function RegxCheck()
+		{
+			var text=document.getElementById('text').value;
+			if(text.match(/[\d]/))
+				{
+					document.write('fasle');
+				}
+			else{
+						 document.write('true');
+				}
+			
+			
+					
+		}
+	</script>
+</head>
+<body>
+	<p>Text</p>
+	<input type="text" name="text" id="text">
+	<input type="button" name="check" value="Check" onclick="RegxCheck()">
+</body>
+</html>

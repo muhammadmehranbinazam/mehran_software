@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code</title>
+	<script type="text/javascript">
+		function Create()
+		{
+		var value=document.getElementById('getValue').value;
+		var option=document.getElementById('op').value;
+		var name=document.getElementById('Name').value;
+		var Elementp=document.createElement('p');
+		var Elementp= document.createTextNode(value);
+		var Element=document.createElement("input");
+
+		Element.setAttribute("type",option);
+		Element.setAttribute("name",name);
+		Element.setAttribute("id",name);
+		Element.setAttribute("value",value);
+		document.body.appendChild(Elementp);
+		document.body.appendChild(Element);
+
+		
+	}
+	
+	</script>
+</head>
+<body>
+	
+	<select id="op">
+		<option value="text">Text Box</option>
+		<option value="password">Password</option>
+		<option value="radio">Radio</option>
+		<option value="checkBox">CheckBox</option>
+		<option value="submit">Submit</option>
+	</select>
+	Name/Id:
+	<input type="text" name="text" id="Name">
+	Value:
+	<input type="text" name="Value" id='getValue'>
+	<input type="button" name="button" value="Create" onclick="Create()">
+	
+</body>
+</html>
